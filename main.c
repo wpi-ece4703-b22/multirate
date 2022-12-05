@@ -1,10 +1,7 @@
 #include "xlaudio.h"
 #include "xlaudio_armdsp.h"
 
-// This is an interpolation filter with 41 taps
-// and four samples per symbol. It has a sinc(x) shape.
-// Note that every fourth coefficient is zero, as we would
-// expect for such an interpolation filter
+// This is an interpolation filter with 49 taps at 8 taps per symbol
 #define NUMCOEF 49
 #define RATE    8
 
