@@ -116,7 +116,7 @@ uint16_t processSampleMultirate(uint16_t x) {
     float32_t q = 0.0;
     uint16_t limit = (phase == 0) ? NUMCOEF/RATE + 1 : NUMCOEF/RATE;
     for (i=0; i<limit; i++)
-        q += symboltaps[i] * coef[i * RATE + phase + 1];
+        q += symboltaps[i] * coef[i * RATE + phase];
 
     return xlaudio_f32_to_dac14(0.25 * q);
 }
